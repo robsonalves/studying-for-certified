@@ -4,6 +4,21 @@ Este documento reúne todos os tópicos estudados para a certificação AWS Cert
 
 ---
 
+## 15. Exemplos de Serviços – IaaS, PaaS, SaaS
+
+### Exemplo de PaaS (Platform as a Service)
+
+A AWS Elastic Beanstalk é um exemplo clássico de **PaaS (Plataforma como Serviço)**, pois permite aos desenvolvedores implantar aplicações sem precisar gerenciar a infraestrutura subjacente (como servidores, balanceadores de carga ou instâncias EC2).  
+
+💡 **Elastic Beanstalk cuida automaticamente do provisionamento, balanceamento de carga, escalabilidade e monitoramento da aplicação.**
+
+#### Comparações com outros modelos:
+
+- **Dropbox** e **Gmail** são exemplos de **SaaS (Software as a Service)**: o usuário consome a aplicação pronta, sem interagir com a infraestrutura ou plataforma.
+- **Microsoft Azure** refere-se à plataforma completa de nuvem da Microsoft, podendo englobar IaaS, PaaS e SaaS – não é um exemplo específico de PaaS.
+
+![Exemplo de PaaS - Elastic Beanstalk](../assets/exemplo-paas-elastic-beanstalk.png)
+
 ## 14. Shared Responsibility Model (Modelo de Responsabilidade Compartilhada)
 
 
@@ -331,6 +346,14 @@ Baseado na publicação [NIST SP 800-145](https://nvlpubs.nist.gov/nistpubs/Lega
 
 5. **Measured service**  
    - O uso de recursos é monitorado, controlado e relatado, permitindo cobrança sob demanda com transparência.
+
+---
+
+### ❌ Característica que NÃO é típica da Computação em Nuvem
+
+- **Single-tenancy** não é considerada uma característica fundamental da computação em nuvem.
+- O modelo padrão é o **multi-tenancy**, no qual múltiplos usuários (tenants) compartilham os mesmos recursos (como armazenamento ou aplicações), cada um com seu próprio espaço seguro e isolado.
+- Single-tenancy pode existir em cenários específicos (como compliance ou segurança), mas **não é uma característica essencial** segundo os princípios do NIST.
 
 ---
 
