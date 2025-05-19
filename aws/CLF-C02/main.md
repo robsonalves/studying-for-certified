@@ -4,6 +4,22 @@ Este documento reúne todos os tópicos estudados para a certificação AWS Cert
 
 ---
 
+## 12. Infraestrutura Global da AWS
+
+A infraestrutura global da AWS é composta por:
+
+- **Regiões (Regions)**: localizações físicas ao redor do mundo onde a AWS tem data centers.
+- **Zonas de Disponibilidade (Availability Zones - AZs)**: grupos de um ou mais data centers distintos dentro de uma região.
+
+### Conceitos Importantes
+
+- Cada **região** é composta por **múltiplas AZs**, projetadas para serem isoladas umas das outras em falhas físicas.
+- Os dados podem ser replicados entre AZs para garantir alta disponibilidade e tolerância a falhas.
+- Clientes podem escolher a região onde os recursos serão implantados, o que afeta latência, conformidade e custo.
+
+📌 Link oficial da AWS sobre infraestrutura global:  
+[https://aws.amazon.com/about-aws/global-infrastructure/regions_az/](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/)
+
 ## 1. Introdução aos Bancos de Dados Gerenciados na AWS
 
 ### Amazon RDS
