@@ -4,6 +4,56 @@ Este documento reúne todos os tópicos estudados para a certificação AWS Cert
 
 ---
 
+## 14. Shared Responsibility Model (Modelo de Responsabilidade Compartilhada)
+
+
+A AWS opera sob um modelo de responsabilidade compartilhada entre a **plataforma da AWS** e o **cliente**.
+
+---
+
+### Explicação Adicional
+
+O modelo de responsabilidade compartilhada da AWS define claramente quais aspectos da segurança são de responsabilidade da AWS e quais pertencem ao cliente:
+
+- A **AWS é responsável pela segurança da *infraestrutura da nuvem*** (*security "of" the cloud*), incluindo a segurança física dos data centers, hardware, software base (como hipervisores) e rede.
+
+- O **cliente é responsável pela segurança *dentro da nuvem*** (*security "in" the cloud*), o que inclui:
+  - Dados e criptografia (lado do cliente e do servidor)
+  - Configurações do sistema operacional, rede e firewall
+  - Gerenciamento de usuários e permissões via IAM
+  - Segurança da aplicação e dados sensíveis
+
+💡 As responsabilidades podem variar de acordo com o serviço utilizado (EC2 vs Lambda, por exemplo).
+
+📌 A AWS oferece recursos como **IAM, Security Groups, KMS, backup automático** e outras ferramentas para ajudar os clientes a protegerem seus ambientes.
+
+📷 ![Shared Responsibility Model](../assets/shared-responsibility-model.jpeg)
+
+Fonte: [https://aws.amazon.com/compliance/shared-responsibility-model/](https://aws.amazon.com/compliance/shared-responsibility-model/)
+
+### Responsabilidades do Cliente (Security *in* the Cloud)
+
+- **Dados do cliente**
+- **Gerenciamento de identidade e acesso (IAM)**
+- **Configuração de sistema operacional, rede e firewall**
+- **Criptografia no lado do cliente e integridade dos dados**
+- **Criptografia no lado do servidor (sistema de arquivos ou dados)**
+- **Proteção do tráfego de rede (criptografia, integridade, identidade)**
+
+### Responsabilidades da AWS (Security *of* the Cloud)
+
+- **Infraestrutura global da AWS**
+  - Regiões
+  - Zonas de Disponibilidade (AZs)
+  - Edge Locations
+- **Serviços de Software**
+  - Compute
+  - Storage
+  - Database
+  - Networking
+
+📌 Fonte oficial: [Shared Responsibility Model](https://aws.amazon.com/compliance/shared-responsibility-model/)
+
 ## 12. Infraestrutura Global da AWS
 
 A infraestrutura global da AWS é composta por:
@@ -321,5 +371,30 @@ A imagem abaixo representa um cenário típico de alta disponibilidade (HA) e re
 A região **N. Virginia** (us-east-1) é frequentemente usada em exemplos da AWS por conter o maior número de **Availability Zones (6 AZs)**.
 
 Essa abordagem ilustra a importância de distribuir suas cargas de trabalho entre múltiplas AZs e até mesmo entre **regiões diferentes** para garantir resiliência e continuidade dos serviços.
+
+---
+
+### Definições Complementares – HA & DR
+
+📌 **High Availability (HA)**:  
+É a capacidade de um sistema, serviço ou aplicação permanecer acessível e funcional com **mínimo tempo de inatividade**, mesmo diante de falhas de hardware, software, manutenção programada ou eventos inesperados.
+
+📌 **Disaster Recovery (DR)**:  
+Conjunto de estratégias e serviços usados para proteger, restaurar e garantir a **recuperação de sistemas críticos de TI e dados**, após eventos catastróficos ou interrupções significativas.
+
+#### Dois principais tipos de replicação:
+
+- **Replicação entre Zonas de Disponibilidade (AZs)**:
+  - Foco em Alta Disponibilidade (HA) e recuperação de desastres em nível de zona.
+  - Minimiza o tempo de inatividade.
+  
+- **Replicação entre Regiões**:
+  - Foco em latência reduzida e recuperação de desastres regionais.
+  - Aproxima os serviços dos clientes e garante continuidade mesmo em falhas amplas.
+
+🗺️ Exemplo visual reforça:
+- **us-west-1**: apenas uma instância EC2 em uma AZ.
+- **us-east-1**: instâncias em duas AZs distintas para alta disponibilidade.
+- Ilustra as práticas de replicação entre AZs e entre Regiões.
 
 ---
