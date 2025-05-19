@@ -283,4 +283,43 @@ Baseado na publicação [NIST SP 800-145](https://nvlpubs.nist.gov/nistpubs/Lega
    - O uso de recursos é monitorado, controlado e relatado, permitindo cobrança sob demanda com transparência.
 
 ---
+
+## 13. Fundamentos de Alta Disponibilidade e Recuperação de Desastres
+
+### Alta Disponibilidade (High Availability)
+
+- Refere-se à capacidade de um sistema permanecer funcional mesmo diante de falhas parciais.
+- Implementado por meio de:
+  - Recursos distribuídos entre múltiplas **Availability Zones (AZs)**.
+  - **Load Balancers** para distribuir tráfego.
+  - **Auto Scaling Groups** para substituir instâncias automaticamente.
+- Exemplo na AWS: usar RDS em modo **Multi-AZ** ou aplicações distribuídas com **Elastic Load Balancer**.
+
+### Recuperação de Desastres (Disaster Recovery)
+
+- Estratégias para restaurar serviços em caso de falha catastrófica.
+- Conceitos-chave:
+  - **RTO (Recovery Time Objective)**: quanto tempo o sistema pode ficar fora do ar.
+  - **RPO (Recovery Point Objective)**: quanto de dados a empresa pode perder.
+- Estratégias comuns:
+  - **Backup & Restore**: mais simples e barato, mas com maior RTO.
+  - **Pilot Light**: recursos mínimos ativos, ativação rápida do ambiente completo.
+  - **Warm Standby**: ambiente funcional, porém com capacidade reduzida.
+  - **Multi-site Active/Active**: ambientes replicados e ativos em mais de uma região.
+
+---
+
+### Exemplo Visual – Alta Disponibilidade e Recuperação de Desastres
+
+A imagem abaixo representa um cenário típico de alta disponibilidade (HA) e recuperação de desastres (DR) em duas regiões diferentes da AWS:
+
+- **Região us-west-1**: mostra um EC2 Service distribuído entre duas AZs (AZ-a e AZ-b), com uma instância rodando em AZ-a.
+- **Região us-east-1 (N. Virginia)**: mostra duas instâncias EC2 distribuídas em AZ-a e AZ-b, configuradas para alta disponibilidade.
+- Esse tipo de arquitetura é usado **para tolerar falhas de zona** e possibilitar **baixa latência e recuperação de desastres entre regiões**.
+
+📌 **Destaque**:  
+A região **N. Virginia** (us-east-1) é frequentemente usada em exemplos da AWS por conter o maior número de **Availability Zones (6 AZs)**.
+
+Essa abordagem ilustra a importância de distribuir suas cargas de trabalho entre múltiplas AZs e até mesmo entre **regiões diferentes** para garantir resiliência e continuidade dos serviços.
+
 ---
