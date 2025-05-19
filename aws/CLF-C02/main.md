@@ -193,4 +193,78 @@ Este documento será atualizado com:
 
 ---
 
-### Atualizado em: 2025-05-18
+
+---
+
+## 11. Cloud Computing – Visão Geral e Vantagens
+
+### Conceito
+
+- Modelo de entrega de serviços de TI pela internet.
+- Fornece **armazenamento, poder computacional e software** sob demanda.
+- Principais provedores: **AWS, Azure, Google Cloud**.
+
+### Benefícios Principais
+
+1. **Trade fixed expense (CapEx) for variable expense (OpEx)**  
+   - CapEx: grandes investimentos iniciais.  
+   - OpEx: paga-se apenas pelo uso.
+
+2. **Benefit from massive economies of scale**  
+   - Preços baixos devido ao uso agregado por milhares de clientes.
+
+3. **Stop guessing capacity**  
+   - Escalabilidade elástica conforme necessidade, com aviso prévio de minutos.
+
+4. **Increase speed and agility**  
+   - Novos recursos podem ser implantados quase instantaneamente.
+
+5. **Stop spending money running and maintaining data centers**  
+   - Foco no cliente, não em infraestrutura de TI.
+
+6. **Go global in minutes**  
+   - Baixa latência e melhor experiência para clientes ao redor do mundo.
+
+### Características Fundamentais segundo o NIST
+
+De acordo com a publicação especial 800-145 do NIST (National Institute of Standards and Technology), o modelo de computação em nuvem apresenta **cinco características essenciais**:
+
+1. **On-demand self-service**  
+   - O usuário pode provisionar e liberar recursos conforme necessário, sem interação humana com o provedor.
+
+2. **Broad network access**  
+   - Os recursos estão disponíveis na rede e acessíveis por meio de dispositivos como notebooks, smartphones e tablets.
+
+3. **Multi-tenancy & Resource pooling**  
+   - Os recursos são agrupados e alocados dinamicamente para diferentes usuários conforme a demanda.
+   - Multi-tenancy permite que múltiplos clientes compartilhem a mesma infraestrutura com segurança e isolamento de dados.
+
+4. **Rapid elasticity**  
+   - Capacidade de expandir ou reduzir recursos de maneira rápida para se adaptar à demanda.
+
+5. **Measured service**  
+   - O uso de recursos é monitorado e reportado, permitindo cobrança baseada no consumo (modelo pay-as-you-go).
+
+---
+
+### NIST – 5 Características da Computação em Nuvem
+
+Baseado na publicação [NIST SP 800-145](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf), as cinco características definidoras de computação em nuvem são:
+
+1. **On-demand self-service**  
+   - Usuários podem provisionar e liberar recursos automaticamente sem intervenção humana direta.
+
+2. **Broad network access**  
+   - Recursos são acessíveis via rede por meio de dispositivos heterogêneos como laptops, celulares e tablets.
+
+3. **Multi-tenancy & Resource pooling**  
+   - Recursos são compartilhados entre múltiplos usuários (multi-tenancy) e alocados dinamicamente conforme a demanda.
+
+4. **Rapid elasticity**  
+   - Capacidade de escalar recursos de maneira rápida e elástica, com crescimento ou redução sob demanda.
+
+5. **Measured service**  
+   - O uso de recursos é monitorado, controlado e relatado, permitindo cobrança sob demanda com transparência.
+
+---
+---
