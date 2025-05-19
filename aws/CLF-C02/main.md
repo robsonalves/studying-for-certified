@@ -69,6 +69,7 @@ Fonte: [https://aws.amazon.com/compliance/shared-responsibility-model/](https://
 
 📌 Fonte oficial: [Shared Responsibility Model](https://aws.amazon.com/compliance/shared-responsibility-model/)
 
+
 ## 12. Infraestrutura Global da AWS
 
 A infraestrutura global da AWS é composta por:
@@ -84,6 +85,20 @@ A infraestrutura global da AWS é composta por:
 
 📌 Link oficial da AWS sobre infraestrutura global:  
 [https://aws.amazon.com/about-aws/global-infrastructure/regions_az/](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/)
+
+---
+
+### Fatores a considerar ao escolher uma Região AWS
+
+Ao selecionar uma **região AWS** para executar seus serviços, considere os seguintes fatores:
+
+- **Latência**: A distância física entre a região e seus usuários pode impactar o desempenho. Regiões mais próximas tendem a oferecer menor latência.
+- **Conformidade (Compliance)**: Algumas indústrias exigem que os dados permaneçam em regiões específicas. Escolher uma região adequada ajuda a atender aos requisitos legais.
+- **Soberania dos Dados (Data Sovereignty)**: Alguns países têm leis que exigem que certos dados sejam armazenados localmente.
+- **Custo**: Os preços dos serviços AWS podem variar entre regiões. Avaliar diferentes regiões pode resultar em economia.
+- **Ofertas de Serviço (Service Offerings)**: Nem todos os serviços AWS estão disponíveis em todas as regiões. Verifique a disponibilidade do serviço desejado na região selecionada.
+
+📌 Essas considerações são importantes para equilibrar desempenho, conformidade e custo ao projetar soluções na nuvem.
 
 ## 1. Introdução aos Bancos de Dados Gerenciados na AWS
 
@@ -421,3 +436,21 @@ Conjunto de estratégias e serviços usados para proteger, restaurar e garantir 
 - Ilustra as práticas de replicação entre AZs e entre Regiões.
 
 ---
+
+### Propósito da Replicação entre Zonas de Disponibilidade (AZs)
+
+A replicação entre diferentes **Availability Zones (AZs)** tem como principal objetivo garantir **Alta Disponibilidade (High Availability)**. Cada AZ é uma localização física independente dentro de uma mesma região, isolada de falhas que afetam outras AZs.
+
+✅ Ao replicar seus recursos entre múltiplas AZs, você assegura que sua aplicação continue disponível mesmo que uma das AZs enfrente falhas.
+
+---
+
+### Propósito da Replicação entre Regiões
+
+A replicação entre diferentes **Regiões** tem dois objetivos principais:
+
+1. **Recuperação de Desastres (Disaster Recovery)**: Em caso de falha regional, dados replicados em outra região permitem uma recuperação rápida da aplicação.
+2. **Redução de Latência**: Replicar dados em regiões mais próximas dos usuários finais pode melhorar significativamente a experiência do usuário final, diminuindo o tempo de resposta.
+
+📌 Isso complementa a estratégia de resiliência e desempenho em aplicações distribuídas globalmente.
+
